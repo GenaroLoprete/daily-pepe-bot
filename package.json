@@ -2,7 +2,7 @@
   "name": "daily-pepe-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "pepe-bot.js",
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
