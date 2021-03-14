@@ -1,20 +1,11 @@
-const Twit = require('twit');
-const pepes = require('rare-pepe-api');
+const cron = require('node-cron');
+const dotenv = require('dotenv');
 
-var T = new Twit({
-    consumer_key: '...',
-    consumer_secret: '...',
-    access_token: '...',
-    access_token_secret: '...',
-    timeout_ms: 60 * 1000,  // optional HTTP request timeout to apply to all requests.
-    strictSSL: true,     // optional - requires SSL certificates to be valid.
+dotenv.config();
+console.log(new Date());
+cron.schedule('0 18 * * *', () => {
+    require('./functions/makeTweet').makeTweet();
 });
-
-
-
-
-
-
 
 /*For staying the bot alive, weird, but need to have the bot alive*/
 var http = require('http');
