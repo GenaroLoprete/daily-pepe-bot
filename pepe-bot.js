@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 console.log(new Date());
-cron.schedule('0 8 * * *', () => {
+cron.schedule('0 12 * * *', () => {
     require('./functions/makeTweet').makeTweet();
 });
 
