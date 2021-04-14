@@ -1,9 +1,9 @@
 const cron = require('node-cron');
 const dotenv = require('dotenv');
-
+//todo make cron rulke constant
 dotenv.config();
 console.log(new Date());
-cron.schedule('5 21 * * *', () => {
+cron.schedule(process.env.CRON, () => {
     require('./functions/makeTweet').makeTweet();
 });
 
