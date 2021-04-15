@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 //todo make cron rulke constant
 dotenv.config();
 console.log(new Date());
-cron.schedule('0 12 * * *', () => {
+cron.schedule('0 15 * * *', () => {
     require('./functions/makeTweet').makeTweet();
 });
 
